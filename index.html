@@ -13,28 +13,28 @@
 
 <header>
     <h1>
-    <img src="assets/icons8-favorite-96.png" style="border:4px groove skyblue; height: 24px" alt="LOVE LOGO">
-    Добро пожаловать!</h1>
+    <img src="assets/icons8-favorite-96.png" style="border:4px groove skyblue; height: 24px" alt="LOVE LOGO" class="logo">
+        <i>Love IS ...</i> <br>Добро пожаловать!</h1>
 </header>
 <main>
     <nav class="menu">
-        <ul>
-            <li><a href="#introduction">Введение</a></li>
-            <li><a href="#main_info">Основная часть</a></li>
-            <li><a href="#footer">Доп. инфо</a></li>
+        <ul class="menu">
+            <li class="crumb"><a href="#introduction">Введение</a></li>
+            <li class="crumb"><a href="#main_info">Основная часть</a></li>
+            <li class="crumb"><a href="#footer">Доп. инфо</a></li>
         </ul>
     </nav>
 
     <div id="introduction">
-    <h2>Вы попали на сайт знакомств❤</h2>
+    <h2>Вы попали на сайт знакомств ❤</h2>
     <h3>Вам есть 18 лет?</h3>
     <aside>
-        <p>P.S. Даже если нет, мы все равно не сможем это проверить. Так что совет-да любовь!</p>
+        <p><i>P.S.</i> Даже если нет, мы все равно не сможем это проверить. Так что совет-да любовь!</p>
     </aside>
-    <img src="assets/ukupnik.png" style="width: 250px; border:4px double grey" alt="LOCK">
+    <img src="assets/ukupnik.png" style="width: 250px; border:4px double grey" alt="LOCK" id="ukupnik">
     <br>
     <h3>Мы готовы представить вам наш революционный веб-сервис!</h3>
-    <ul>
+    <ul id="advantages">
         <li>
             <strong>Востребованность!</strong> <i>«Лучшие, качественные дети рождаются в 20 лет»</i> <sub>(Министр семьи, труда и соцзащиты Башкирии)</sub>
             <pre>
@@ -77,6 +77,7 @@ const int sizeof_int = sizeof( int );
     <div id="main_info">
         <section>
             <h3>Вот такие типы анкет будут на нашем сайте:</h3>
+            <img src="assets/man-laptop-emojis.png" alt="man with laptop">
             <article class="types">
                 <h4>Знакомства для отношений</h4>
                 <p>
@@ -114,11 +115,14 @@ const int sizeof_int = sizeof( int );
         </section>
     </div>
 </main>
+
 <footer>
     <div id="footer">
-    <i>копирайт:</i>
-    <a target="_blank" href="https://icons8.com/icon/42812/favorite">Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-    </div>
+    <p>
+        ©
+     <a target="_blank" href="https://icons8.com/icon/42812/favorite">Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+     </div>
+    </p>
 </footer>
 
 </body>
