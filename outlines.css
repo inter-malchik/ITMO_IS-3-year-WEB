@@ -17,8 +17,26 @@ aside > p {
     word-spacing: 1px;
 }
 
-ul#advantages > li {
-    padding-top: 1rem;
+ul.advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    flex-grow: 4;
+}
+
+ul.advantages > li {
+    padding: 1rem;
+    margin: 1rem;
+    background: #EEA6AA;
+    list-style-type: none;
+}
+
+@media (max-width: 768px) or (orientation: portrait) {
+    ul.advantages>li#women {
+        display: none;
+    }
 }
 
 .types {
@@ -105,4 +123,21 @@ div#main_info img {
     filter: drop-shadow(4px 4px);
     height: 250px;
     margin-bottom: 25px;
+}
+
+section {
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+section>article {
+    max-width: 15rem;
+    min-width: 6rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.advantages_vertical {
+    display: flex;
+    flex-direction: column;
 }
