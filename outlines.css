@@ -34,7 +34,7 @@ ul.advantages > li {
 }
 
 @media (max-width: 768px) or (orientation: portrait) {
-    ul.advantages>li#women {
+    ul.advantages > li#women {
         display: none;
     }
 }
@@ -84,7 +84,7 @@ ul.menu {
 }
 
 ul.menu > li {
-    display:inline-block;
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -112,6 +112,7 @@ code > pre {
 
 footer > div {
     background: #f5d28c;
+    position: absolute;
 }
 
 footer > div > p {
@@ -130,7 +131,8 @@ section {
     flex-shrink: 1;
     flex-wrap: wrap;
 }
-section>article {
+
+section > article {
     max-width: 15rem;
     min-width: 6rem;
     padding: 1rem;
@@ -140,4 +142,81 @@ section>article {
 .advantages_vertical {
     display: flex;
     flex-direction: column;
+}
+
+.table_title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table_row:nth-child(even) {
+    background-color: khaki;
+}
+
+.table_row:nth-child(odd) {
+    background-color: darkkhaki;
+}
+
+.table_header {
+    background-color: dimgrey;
+    color: white;
+}
+
+.table_header > th {
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.table_row > td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.table_row > td > span {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .table_header {
+        display: none;
+    }
+
+    .table_row {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 3px solid grey;
+        border-radius: 0.5rem;
+    }
+
+    .table_row:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .table_row > td {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid grey;
+        border-top: 0;
+    }
+
+    .table_row > td > span {
+        display: inline-flex;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+
+    li#code_base {
+        display: none;
+    }
+    img#man_with_laptop {
+        display: none;
+    }
 }
