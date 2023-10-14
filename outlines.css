@@ -74,6 +74,9 @@ nav.menu {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
+    position: fixed;
+    top: 0;
+    right: 1rem;
 }
 
 ul.menu {
@@ -112,7 +115,9 @@ code > pre {
 
 footer > div {
     background: #f5d28c;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 footer > div > p {
