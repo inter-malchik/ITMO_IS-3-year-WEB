@@ -225,3 +225,30 @@ section > article {
         display: none;
     }
 }
+
+div.load-time {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+div.load-time > p {
+    font-style: italic;
+}
+
+a:hover {
+    color: pink;
+}
+
+a:active {
+    background-color: #999;
+    font-weight: bolder;
+}
+
+a.current_page {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
