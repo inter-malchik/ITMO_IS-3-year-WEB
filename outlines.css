@@ -17,8 +17,26 @@ aside > p {
     word-spacing: 1px;
 }
 
-ul#advantages > li {
-    padding-top: 1rem;
+ul.advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    flex-grow: 4;
+}
+
+ul.advantages > li {
+    padding: 1rem;
+    margin: 1rem;
+    background: #EEA6AA;
+    list-style-type: none;
+}
+
+@media (max-width: 768px) or (orientation: portrait) {
+    ul.advantages > li#women {
+        display: none;
+    }
 }
 
 .types {
@@ -56,6 +74,9 @@ nav.menu {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
+    position: fixed;
+    top: 0;
+    right: 1rem;
 }
 
 ul.menu {
@@ -66,7 +87,7 @@ ul.menu {
 }
 
 ul.menu > li {
-    display:inline-block;
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -94,6 +115,9 @@ code > pre {
 
 footer > div {
     background: #f5d28c;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 footer > div > p {
@@ -105,4 +129,99 @@ div#main_info img {
     filter: drop-shadow(4px 4px);
     height: 250px;
     margin-bottom: 25px;
+}
+
+section {
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+
+section > article {
+    max-width: 15rem;
+    min-width: 6rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.advantages_vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.table_title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table_row:nth-child(even) {
+    background-color: khaki;
+}
+
+.table_row:nth-child(odd) {
+    background-color: darkkhaki;
+}
+
+.table_header {
+    background-color: dimgrey;
+    color: white;
+}
+
+.table_header > th {
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.table_row > td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.table_row > td > span {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .table_header {
+        display: none;
+    }
+
+    .table_row {
+        display: flex;
+        flex-direction: column-reverse;
+        border: 3px solid grey;
+        border-radius: 0.5rem;
+    }
+
+    .table_row:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .table_row > td {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid grey;
+        border-top: 0;
+    }
+
+    .table_row > td > span {
+        display: inline-flex;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+
+    li#code_base {
+        display: none;
+    }
+    img#man_with_laptop {
+        display: none;
+    }
 }
