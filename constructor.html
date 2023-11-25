@@ -10,6 +10,7 @@
     <title>Веб-доска «быстрые знакомства рядом»</title>
     <script src="scripts/hearts-flowing.js"></script>
     <script src="scripts/load-time.js"></script>
+    <script src="scripts/men-wish-adder.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <h1>
         <img src="assets/icons8-favorite-96.png" style="border:4px groove skyblue; height: 24px" alt="LOVE LOGO"
              class="logo">
-        <i>Love IS ...</i> <br>Добро пожаловать!</h1>
+        <i>Love IS ...</i>
 </header>
 <main>
     <nav class="menu">
@@ -28,6 +29,8 @@
             <li class="crumb"><a href="constructor.html" class="">Конструктор</a></li>
         </ul>
     </nav>
+
+    <h3>Дорогие дамы! На этой странице вы можете собрать мужчину своей мечты.</h3>
 
     <script>
         var currentPage = document.location.pathname;
@@ -42,15 +45,43 @@
         }
     </script>
 
-    <div id="introduction">
-        <h2>Вы попали на сайт знакомств ❤</h2>
-        <h3>Вам есть 18 лет?</h3>
-        <aside>
-            <p><i>P.S.</i> Даже если нет, мы все равно не сможем это проверить. Так что совет-да любовь!</p>
-        </aside>
-        <img src="assets/ukupnik.png" style="width: 25vw; border:4px double grey" alt="LOCK" id="ukupnik">
+
+    <form name="addProperty" class="addProperty_form">
+        <label>Я хочу чтобы он был
+            <input required type="text" name="name">
+        </label>
         <br>
+        <label>приоритет:
+            <select required name="priority">
+                <option>обязательно</option>
+                <option>желательно</option>
+                <option>было бы плюсом</option>
+            </select>
+        </label>
+        <br>
+        <button type="submit" class="submit_button">Пожелать 😘</button>
+    </form>
+
+    <div>
+        <h2 class="man_storage">Список желаний:</h2>
+        <table class="table_storage">
+            <thead>
+            <tr class="storage_header table_header">
+                <th>Характеристика</th>
+                <th>Приоритет</th>
+            </tr>
+            </thead>
+            <tbody class="storage">
+            <template id="storageRowTemplate">
+                <tr class="storage_row table_row">
+                    <td class="storage_property"></td>
+                    <td class="storage_priority"></td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
     </div>
+
 </main>
 
 <footer>
