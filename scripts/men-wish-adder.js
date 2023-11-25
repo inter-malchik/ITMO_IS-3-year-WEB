@@ -27,7 +27,6 @@
       }
     })
 
-
     const form = document.getElementsByName("addProperty")[0]
     form.addEventListener("submit", (event) => {
       event.preventDefault()
