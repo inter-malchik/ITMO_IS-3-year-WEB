@@ -10,6 +10,7 @@
     <title>Веб-доска «быстрые знакомства рядом»</title>
     <script src="scripts/hearts-flowing.js"></script>
     <script src="scripts/load-time.js"></script>
+    <script src="scripts/board.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <h1>
         <img src="assets/icons8-favorite-96.png" style="border:4px groove skyblue; height: 24px" alt="LOVE LOGO"
              class="logo">
-        <i>Love IS ...</i> <br>Добро пожаловать!</h1>
+        <i>Love IS ...</i>
 </header>
 <main>
     <nav class="menu">
@@ -29,6 +30,8 @@
             <li class="crumb"><a href="board.html" class="">Веб-доска</a></li>
         </ul>
     </nav>
+
+    <h2>Доска объявлений:</h2>
 
     <script>
         var currentPage = document.location.pathname;
@@ -43,15 +46,25 @@
         }
     </script>
 
-    <div id="introduction">
-        <h2>Вы попали на сайт знакомств ❤</h2>
-        <h3>Вам есть 18 лет?</h3>
-        <aside>
-            <p><i>P.S.</i> Даже если нет, мы все равно не сможем это проверить. Так что совет-да любовь!</p>
-        </aside>
-        <img src="assets/ukupnik.png" style="width: 25vw; border:4px double grey" alt="LOCK" id="ukupnik">
-        <br>
+    <div class="content-container">
+        <main class="content">
+            <div class="loader-container">
+                <img src="assets/download-no-u-download.gif" class="loader">
+                <img src="assets/error-wait.gif" class="error error__hidden">
+            </div>
+
+            <div class="reviews_container">
+                <template id="reviewTemplate">
+                    <div class="review">
+                        <div class="review_title"></div>
+                        <div class="review_body"></div>
+                    </div>
+                </template>
+            </div>
+        </main>
     </div>
+
+
 </main>
 
 <footer>
