@@ -22,14 +22,15 @@
 
     window.addEventListener("load", async () => {
         try {
-            const response_data = await (await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${Math.floor(1 + Math.random() * 10)}`)).json()
-            console.log(response_data)
-            response_data.forEach(review => {
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${Math.floor(1 + Math.random() * 10)}`)
+            hideLoader()
+            const data = await response.json()
+            console.log(data)
+            data.forEach(review => {
                 if (review.title && review.body) {
                     renderComment(review.title, review.body)
                 }
             });
-            hideLoader()
         } catch (e) {
             hideLoader()
             console.log(e)
